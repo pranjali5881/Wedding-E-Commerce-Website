@@ -1,0 +1,28 @@
+<div *ngFor="let cat of category">
+    <h2 class="text-center">{{cat.name}}</h2>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+
+    
+    <div class="col-lg-3 text-center" *ngFor="let i of products">
+     
+      <a routerLink="/product-detail/{{i._id}}" style="color: black;">
+          
+             
+                
+
+                <img width="300px" height="400px" src="http://localhost:3003/{{i.productImagePath}}" alt="">
+                <h5>
+                  {{i.name}}
+              </h5>
+                
+
+                <h4 style="color: rgb(73, 75, 77);">
+                  ₹{{i.price}}
+                </h4>
+        </a>
+              <hr>
+              <br><br>
+    </div>
+</div>
