@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #84142d;">
+    <a class="navbar-brand" href="#" style="color: rgb(255, 220, 124); font-size:xx-large" routerLink="/main">
+      <img src="assets/logo.png" alt="logo" height="80px" width="80px">
+      VivaahAlankar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" *ngIf="session_set" routerLink="/main" style= "font-size: large; color: white;">Welcome,{{username}}</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/main" style= "font-size: large; color: white;">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: large; color: white;">
+            Category
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(255, 220, 124);">
+            <a class="dropdown-item" href="#" *ngFor="let cat of category" routerLink="/procat/{{cat._id}}">{{cat.name}}</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus" style="font-size: large; color: white;">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contactus" style="font-size: large; color: white;">Contact</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!session_set" routerLink="/login" style="font-size: large; color: white;">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!session_set" routerLink="/register" style="font-size: large; color: white;">Register</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" *ngIf="session_set" (click)="logout()"  style="font-size: large; color: white;">Logout </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/myorders/{{userID}}" style= "font-size: large; color: white;">My Orders <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
