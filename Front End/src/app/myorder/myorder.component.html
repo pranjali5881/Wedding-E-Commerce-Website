@@ -1,0 +1,55 @@
+<h1 class="text-center" style="background-color: pink; padding-top: 5px;padding-bottom: 5px;">My Orders</h1>
+<div *ngFor="let i of order; let m = index" style="width:60%;height:100%;border:1px solid #e8e4e1; margin-left: 300px;">
+    <div style="background-color: #e8e4e1; ">
+        <table style="width: 25%;">
+            <tr>
+                <td style="padding-left: 10px;"><h6>ORDER NO.</h6></td>
+                <td style="padding-left: 10px;"><h6>TOTAL</h6></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 10px;"><b>{{m+1}}</b></td>
+                <td style="padding-left: 10px;"><b>₹{{i.amount}}</b></td>
+            </tr>   
+        </table>
+    </div>
+    <div style="background-color: white;">
+        <!-- <div class="col-lg-4 item" >
+            <img  height="500px" width="600px" src='http://localhost:3000/{{products.productImagePath}}'>
+        </div>
+        <div class="col-lg-8 detail item"> -->
+    
+            <h5 style="padding-left: 10px;"> Product Status : {{i.status}} </h5>
+            <hr>
+            <div *ngFor = "let product of i.products; let n = index">
+                <b style="padding-left: 10px;">Sr No. {{n+1}}</b>
+                <br>
+                <b style="padding-left: 10px;">{{product.name}} </b>
+                <br>
+                <b style="padding-left: 10px;"> Product Quantity: {{product.count}}</b>
+                <br>
+                <b style="padding-left: 10px;">₹{{product.price*product.count}}</b>
+                <hr>
+            </div>
+            
+            
+            
+            
+           
+            
+            
+    </div>
+        
+</div>
+<br><br>
+
+<h3 style="text-align: center;">Want to Buy More?</h3>
+<button routerLink="/main"class="myButton" style="margin-left: 545px;">Get More Items</button>
+
+<br><br><br>
+
+
+
+    
+    
+
+
