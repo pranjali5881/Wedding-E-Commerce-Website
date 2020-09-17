@@ -1,0 +1,36 @@
+.myButton {
+	box-shadow: 4px 5px 4px -1px #8a2a21;
+	background:linear-gradient(to bottom, #b8271a 5%, #ff4a3d 100%);
+	background-color:#b8271a;
+	border-radius:22px;
+	border:3px solid #962b24;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffea03;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	padding:6px 49px;
+	text-decoration:none;
+	text-shadow:3px 2px 0px #810e05;
+	.myButton:hover {
+	background:linear-gradient(to bottom, #ff4a3d 5%, #b8271a 100%);
+	background-color:#ff4a3d;
+		}
+		.myButton:active {
+	position:relative;
+	top:1px;
+}
+}
+
+.selecto{
+	padding: 10px 20px 10px 20px;
+}
+
+h2,h3{
+	font-family: 'Metal Mania', cursive;
+}
+p{
+font-family: 'Montserrat', sans-serif;
+
+}

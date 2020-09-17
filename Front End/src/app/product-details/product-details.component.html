@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-lg-4" style="margin-top: 80px; padding-left: 50px;">
+        <img src="http://localhost:3003/{{products.productImagePath}}" alt="" height="500px" width="400px" >
+    </div>
+
+    <div class="col-lg-4 text-center" style="margin-top: 70px;">
+        <h3>{{products.category.name}}</h3>
+        <hr>
+        <h2>{{products.name}}</h2>
+          <hr>
+        <h3>Price:</h3><h4>₹{{products.price}}</h4>
+        <hr>
+        <h3>Product Description</h3>
+        <b><p>{{products.description}}</p></b>
+        <hr>
+        <h3>
+        Stock:{{products.stock}}
+        </h3>
+    
+    </div>
+
+    
+        <div class="col-lg-4" style="margin-top: 80px; padding-left: 50px;width:100px;height:400px;border:1px solid #000;padding-top: 40px;">
+            <b>Quantity:</b><select name="Quantity" id="" style="margin-left: 20px; " #ingre_qty class="selecto">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br><br><br>
+
+
+            <b>Size:</b><select name="Size" id="" style="margin-left: 20px;" #ingre_qty1 class="selecto">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+        
+            </select>
+
+            <br><br><br>
+                <button (click)="addTocart()" class="myButton"> 
+                    Add to Cart  
+                </button>
+                    <br><br>
+            <a routerLink="/main">
+                <button class="myButton"> 
+                    Go to Main Screen  
+                </button>
+            </a>
+        </div>
+    
+
+</div>
+<br><br><br>
+
